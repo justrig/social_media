@@ -1,0 +1,92 @@
+body{
+    background-color: black;
+}
+
+.newnote{
+    margin:auto;
+    height: 200px;
+    width: 200px;
+    border: 2px white solid;
+    margin-top: 50px;
+    text-align: center;
+    font-family: sans-serif;
+    color: white;
+    transition: .2s;
+}
+
+.newnote > h3{
+    margin-top: 85px;
+}
+
+.newnote:hover{
+    width: 230px;
+    border-left: 2px solid #90ea75;
+    border-right: 2px solid #90ea75;
+    color: #90ea75;
+}
+
+.viewnote{
+    margin:auto;
+    height: 200px;
+    width: 200px;
+    border: 2px white solid;
+    margin-top: 50px;
+    text-align: center;
+    font-family: sans-serif;
+    color: white;
+    transition: .2s;
+}
+
+.viewnote > h3{
+    margin-top: 85px;
+}
+
+.viewnote:hover{
+    width: 230px;
+    border-left: 2px solid #90ea75;
+    border-right: 2px solid #90ea75;
+    color: #90ea75;
+}
+
+a{
+    text-decoration: none;
+}
+
+h4{
+    font-family: sans-serif;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#titleinput{
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    outline: none;
+    border-left: 2px solid #f96363;
+    border-right: 2px solid #f96363;
+}
+
+#bodyinput{
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    outline: none;
+    border-left: 2px solid #f96363;
+    border-right: 2px solid #f96363;
+}
+
+#submit{
+    background-color: black;
+    border: 2px solid white;
+    color: white;
+    outline: none;
+    transition: .2s;
+}
+
+#submit:hover{
+    border-left: 2px solid #f96363;
+    border-right: 2px solid #f96363;
+}

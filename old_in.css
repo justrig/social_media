@@ -1,0 +1,112 @@
+body{
+    background-color: black;
+}
+
+.name{
+    font-family: helvetica;
+    text-align: center;
+    color: white;
+}
+
+.notes{
+    width: 550px;
+    height: 250px;
+    border: 2px solid white;
+    display: inline-block;
+    margin-right: 20px;
+    background-color: #1fa1e1;
+}
+
+.chat{
+    height: 250px;
+    width: 200px;
+    display: inline-block;
+    border: 2px solid white;
+    background-color: #60b5df;
+}
+
+.personal{
+    height: 322px;
+    width: 200px;
+    border: 2px solid white;
+    display: inline-block;
+    background-color: #17678d;
+    position: absolute;
+    margin-top: -72px;
+}
+
+.jobs{
+    height: 250px;
+    width: 540px;
+    border: 2px solid white;
+    display: inline-block;
+    margin-left: 235px;
+    background-color: #7bcbf2;
+}
+
+.logout{
+    height: 55px;
+    width: 280px;
+    border: 2px solid white;
+    margin-top: -330px;
+    margin-left: 500px;
+    background-color: #d62c2c;
+}
+
+a{
+    text-decoration: none;
+}
+
+div>p{
+    font-family: helvetica;
+    color: #dfe2f0;
+    font-size: 20px;
+    margin-top: 100px;
+}
+
+.logout>p{
+    margin-top: 20px;
+}
+
+.personal>p{
+    margin-top: 150px;
+}
+
+#mains{
+    transition: .2s;
+}
+
+#mains:hover{
+    border-left: 2px #f96363 double;
+    border-right: 2px #f96363 double;
+}
+
+#log_text{
+    font-size: 20px;
+    color: white;
+    font-family: helvetica;
+}
+
+.notifications{
+    height: 50px;
+    width: 50px;
+    border: 2px solid white;
+    margin-right: 255px;
+    margin-top: -70px;
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+.notifications p{
+    margin-top: 16px;
+    color: red;
+}
+
+.notifications:hover{
+    background-color: black;
+    color: white;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid red;
+    border-bottom: 2px solid red;
+}
