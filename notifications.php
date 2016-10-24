@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Notifications | Spade</title>
+        <title>notifications | Spade</title>
         <link rel="stylesheet" href="master.css" media="screen" title="no title">
     </head>
     <body style="background-color: black;">
