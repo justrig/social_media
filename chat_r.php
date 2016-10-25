@@ -4,8 +4,9 @@
         <meta charset="utf-8">
         <title>chat</title>
         <?php
+        session_start();
         if (isset($_POST['chat'])) {
-            setcookie('chat_name', $_POST['chat']);
+            $_SESSION['chat_name'] = $_POST['chat'];
             header('Location: chat_r.php');
         }
 
@@ -13,9 +14,9 @@
     </head>
     <body>
         <h1><?php
-        $o = (explode("_", $_COOKIE['chat_name']));
+        $o = (explode("_", $_SESSION['chat_name']));
         foreach ($o as $key => $value) {
-            if ($value != $_COOKIE['username']) {
+            if ($value != $_SESSION['username']) {
                 print $value;
             }
         }
@@ -29,10 +30,10 @@
         <?php
         mysql_connect('localhost', 'emilio', 'k421k421');
         mysql_select_db('spade');
-        $chat_name = $_COOKIE['chat_name'];
+        $chat_name = $_SESSION['chat_name'];
         if (isset($_POST['send'])) {
             $insert_message = "INSERT INTO $chat_name(message, username, date_entered) VALUES(
-                '{$_POST['message']}', '{$_COOKIE['username']}', NOW()
+                '{$_POST['message']}', '{$_SESSION['username']}', NOW()
             )";
             mysql_query($insert_message);
         }

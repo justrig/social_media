@@ -10,9 +10,10 @@
             <input type="submit" name="submit" value="find">
         </form>
         <?php
+        session_start();
         mysql_connect('localhost', 'emilio', 'k421k421');
         mysql_select_db('spade');
-        $user = $_COOKIE['username'];
+        $user = $_SESSION['username'];
         //finds name
         $query = "SELECT * FROM users";
         if ($r = mysql_query($query)) {

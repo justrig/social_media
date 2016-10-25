@@ -9,7 +9,8 @@
         <?php
         mysql_connect('localhost', 'emilio', 'k421k421');
         mysql_select_db('spade');
-        $user = $_COOKIE['username'];
+        session_start();
+        $user = $_SESSION['username'];
 
         //prints out chats
         print "<p>My dm's:</p>";
@@ -30,7 +31,7 @@
 
             //defines some variables
             $user_req = $_POST['user_req'];
-            $user = $_COOKIE['username'];
+            $user = $_SESSION['username'];
             $chat_name = $user . "_" . $user_req;
 
             //checks if chat already exists

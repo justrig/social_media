@@ -106,6 +106,36 @@
         if ($value == ' ') {
             $blank[] = "C&";
         }
+        if ($value == '1') {
+            $blank[] = "!!";
+        }
+        if ($value == '2') {
+            $blank[] = "@@";
+        }
+        if ($value == '3') {
+            $blank[] = "PJ";
+        }
+        if ($value == '4') {
+            $blank[] = "JD";
+        }
+        if ($value == '5') {
+            $blank[] = "IN";
+        }
+        if ($value == '6') {
+            $blank[] = "@4";
+        }
+        if ($value == '7') {
+            $blank[] = "C$";
+        }
+        if ($value == '8') {
+            $blank[] = "JJ";
+        }
+        if ($value == '9') {
+            $blank[] = "NK";
+        }
+        if ($value == '0') {
+            $blank[] = "##";
+        }
     }
     $final = implode("", $blank);
 

@@ -93,36 +93,35 @@ if (isset($_POST['submit'])) {
             $blank[] = "C&";
         }
         if ($value == '1') {
-            $blank[] = "BQ";
+            $blank[] = "!!";
         }
         if ($value == '2') {
-            $blank[] = "N#";
+            $blank[] = "@@";
         }
         if ($value == '3') {
-            $blank[] = "69";
+            $blank[] = "PJ";
         }
         if ($value == '4') {
-            $blank[] = "B!";
+            $blank[] = "JD";
         }
         if ($value == '5') {
-            $blank[] = "NH";
+            $blank[] = "IN";
         }
         if ($value == '6') {
-            $blank[] = "CS";
+            $blank[] = "@4";
         }
         if ($value == '7') {
-            $blank[] = "IA";
+            $blank[] = "C$";
         }
         if ($value == '8') {
-            $blank[] = "AI";
+            $blank[] = "JJ";
         }
         if ($value == '9') {
-            $blank[] = "BJ";
+            $blank[] = "NK";
         }
         if ($value == '0') {
-            $blank[] = "BF";
+            $blank[] = "##";
         }
-
     }
     $check = implode("", $blank);
     $query = "SELECT * FROM users";

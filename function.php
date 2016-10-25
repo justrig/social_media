@@ -54,7 +54,7 @@ function handle($community_name){
 function handle_found(){
     if (isset($_POST['submit'])) {
         $found_user = $_POST['submit'];
-        setcookie('found_user', $found_user);
+        $_SESSION['found_user'] = $found_user;
         header("Location: other_user.php");
     }
 }

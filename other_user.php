@@ -74,10 +74,10 @@
         print "</form>";
         print "<br>";
         print "<hr style = 'width: 600px; margin-left: 100px; margin-top: -10px;'>";
-        $other_user = $_COOKIE['found_user'];
+        $other_user = $_SESSION['found_user'];
         mysql_connect('localhost', 'emilio', 'k421k421');
         mysql_select_db('spade');
-        $name = $_COOKIE['found_user'];
+        $name = $_SESSION['found_user'];
         $query = "SELECT * FROM $name ORDER BY date_entered DESC";
         if ($r = mysql_query($query)) {
             while ($row = mysql_fetch_array($r)) {

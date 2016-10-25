@@ -16,16 +16,7 @@
         mysql_select_db('spade');
         session_start();
         $us = $_SESSION['username'];
-        $sql = "SELECT * FROM $us";
-        if ($r = mysql_query($sql)) {
-            while ($row = mysql_fetch_array($r)) {
-                $u = $row['username'];
-                print $u;
-            }
-        }
-        mysql_close();
-
-
+        print $us;
         ?></h1>
         <a href="notifications.php"><div id = 'mains' class="notifications"><p>*</p></div></a>
         <a href = 'personal.php'><div id = 'mains' class="personal"><p>FEATURES</p></div></a>
