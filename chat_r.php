@@ -32,6 +32,7 @@
         mysql_select_db('spade');
         $chat_name = $_SESSION['chat_name'];
         if (isset($_POST['send'])) {
+            $_POST['message'] = str_replace("'", "\'", $_POST['message']);
             $insert_message = "INSERT INTO $chat_name(message, username, date_entered) VALUES(
                 '{$_POST['message']}', '{$_SESSION['username']}', NOW()
             )";

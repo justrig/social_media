@@ -5,6 +5,9 @@
         <title>my community</title>
     </head>
     <body style = 'background-color: black'>
+        <a href="social.php"><p style='color: white; position: absolute; cursor: pointer'>
+            <–– back
+        </p></a>
         <h1 style = 'color: white; font-family: sans-serif; text-align: center'>My community</h1>
         <br>
         <br>
