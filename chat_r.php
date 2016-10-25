@@ -13,6 +13,9 @@
         ?>
     </head>
     <body bgcolor = 'black'>
+        <a href="chat.php"><p style='color: white; position: absolute; cursor: pointer'>
+            <–– back
+        </p></a>
         <div style='height: 500px; width: 600px; margin: auto;'>
         <h1 style = 'font-family: sans-serif; color: white;'><?php
         $o = (explode("_", $_SESSION['chat_name']));
@@ -46,7 +49,7 @@
         $get_messages = "SELECT * FROM $chat_name ORDER BY date_entered DESC";
         if ($r = mysql_query($get_messages)) {
             while ($row = mysql_fetch_array($r)) {
-                print "<p style = 'color: white; font-family: sans-serif;'>" . $row['message'] . " - " . $row['username'] . "</p>";
+                print "<p style = 'color: white; font-family: sans-serif;'>" . $row['message'] . " - <strong style='color: red; text-decoration: underline;'>" . $row['username'] . "</strong></p>";
             }
         }
 
