@@ -4,8 +4,12 @@
         <meta charset="utf-8">
         <title>chats</title>
     </head>
-    <body>
-        <p><a href = 'new_chat.php'> + </a></p>
+    <body bgcolor='black'>
+        <a href="social.php"><p style='color: white; position: absolute; cursor: pointer'>
+            <–– back
+        </p></a>
+        <div class="contain_chats" style='width: 550px; margin: auto;'>
+        <p><a href = 'new_chat.php' style='font-size: 40px; color: white; text-decoration: none; display: inline; float: right; margin-top: -10px;'> + </a></p>
         <?php
         mysql_connect('localhost', 'emilio', 'k421k421');
         mysql_select_db('spade');
@@ -13,13 +17,20 @@
         $user = $_SESSION['username'];
 
         //prints out chats
-        print "<p>My dm's:</p>";
+        print "<h2 style='color: white; font-family: sans-serif; display: inline;'>THE DM's</h2>";
+        print "<hr>";
         $query = "SELECT * FROM $user ORDER BY date_entered DESC";
         if ($r = mysql_query($query)) {
             while ($row = mysql_fetch_array($r)) {
                 if (!empty($row['chats'])) {
                     //prints links to chats
-                    print "<form action ='chat_r.php' method = 'post'><input type = 'submit' name = 'chat' style='border: 2px solid black; background-color: transparent;' value ='" . $row['chats'] . "'></form><br>";
+                    $o = (explode("_", $row['chats']));
+                    foreach ($o as $key => $value) {
+                        if ($value != $_SESSION['username']) {
+                            print "<form action ='chat_r.php' method = 'post'><input type = 'submit' style=' background-color: transparent; border: 1px solid black; color: white; font-family: sans-serif; font-size: 20px; cursor: pointer' value ='" . $value . "'>";
+                            print "<input type='hidden' name = 'chat' value = '" . $row['chats'] . "'></form><br>";
+                        }
+                    }
                 } elseif($row['chats'] == 'NULL'){
                     print "<p>you have no DM's!<a href = 'new_chat.php'>" . " " . "start one.</a></p>";
                 }
@@ -72,5 +83,6 @@
 
 
         ?>
+    </div>
     </body>
 </html>
