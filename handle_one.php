@@ -149,7 +149,7 @@ if (isset($_POST['submit'])) {
     }
 
     if ($wrong) {
-        print "<p style = 'color: red; font-family: sans-serif; font-size: 30px; text-align: center; margin-top: 260px;'>Either account does not exsist, or you entered something wrong</p>";
-        print "<a style = 'text-decoration: none' href = 'index.html'><p style = 'color: red; text-align: center'>[ home ]</p></a>";
+        print "<p style = 'color: red; font-family: sans-serif; font-size: 30px; text-align: center; margin-top: 260px;'>You messed up doing something, let me try to help. uhhhh..... try again</p>";
+        print "<a style = 'text-decoration: none' href = 'index.php'><p style = 'color: red; text-align: center'>[ try again ]</p></a>";
     }
 ?>

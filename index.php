@@ -9,8 +9,16 @@
     </head>
     <body>
         <div class="bodydiv">
+            <?php
+            $d = date('d') - 1;
+            $date = date('D  M ' . $d . ' , Y');
+            print "<p style = 'color: #d11141; font-family: \"bungee\"'>" . $date . "</p>";
+            ?>
+            <h1 id ='index_title'>Plumebin</h1>
+            <hr>
             <a href="log_in.html"><div class="buttonone"><p>log in</p></div></a>
             <a href='about.html'><div class="buttontwo"><p>about</p></div></a>
+            <a href='comboard.php'><div class="buttonthree"><p>community board</p></div></a>
         </div>
     </body>
 </html>

@@ -21,7 +21,7 @@
             }
         }
         $ntwelve = 0;
-        $query = "SELECT * FROM $u";
+        $query = "SELECT * FROM $user";
         if ($r = mysql_query($query)) {
             while ($row = mysql_fetch_array($r)) {
                 $ntwelve +=$row['subs_count'];

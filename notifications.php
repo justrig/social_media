@@ -14,7 +14,8 @@
         <?php
         mysql_connect('localhost', 'emilio', 'k421k421');
         mysql_select_db('spade');
-        $user = $_COOKIE['username'];
+        session_start();
+        $user = $_SESSION['username'];
         $query = "SELECT * FROM $user ORDER BY date_entered DESC";
         if ($r = mysql_query($query)) {
             while ($row = mysql_fetch_array($r)) {
